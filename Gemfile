@@ -13,12 +13,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'devise', '~> 3.4.1'
-gem 'cancancan', '~> 1.10'
 gem 'haml'
 gem 'ckeditor'
 gem "paperclip"
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
+group :authentication do
+	gem 'devise', '~> 3.4.1'
+	gem 'cancancan', '~> 1.10'
+	gem 'omniauth'
+	gem 'omniauth-github'
+end	
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
