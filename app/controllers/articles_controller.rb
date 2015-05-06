@@ -45,6 +45,13 @@ class ArticlesController < ApplicationController
 
 		redirect_to article_path
 	end
+
+	def feed
+		@articles = Article.all
+		respond_to do |format|
+			format.rss {render :layout=> false}
+		end	
+	end
 	
 	private
 	def article_params

@@ -1,8 +1,10 @@
 %p
 	%h1 Hello
 	-if user_signed_in?
-		=current_user.email
 		=image_tag avatar_url(current_user)
+		%br
+		=current_user.email
+
 	-else
 		Guest
 

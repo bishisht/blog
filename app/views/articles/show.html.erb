@@ -11,10 +11,12 @@
 
 <h2>Comments</h2>
 <%= render @article.comments %>
+<div id="comment"></div>
+<div>
+	<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
+</div>
 
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
 
 <%= link_to 'Edit', edit_article_path(@article) %>
