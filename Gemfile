@@ -16,7 +16,7 @@ gem 'autoprefixer-rails'
 gem 'devise', '~> 3.4.1'
 gem 'cancancan', '~> 1.10'
 gem 'haml'
-# gem 'html2haml'
+gem 'ckeditor'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
