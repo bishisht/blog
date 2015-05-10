@@ -19,6 +19,7 @@ gem 'haml'
 gem 'ckeditor'
 gem "paperclip"
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
+gem 'rails_admin'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
