@@ -9,7 +9,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   ## == Cancan ==
-  config.authorize_with :cancan, AdminAbility
+  config.authorize_with :cancan #, AdminAbility
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
@@ -31,11 +31,7 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-  # config.model 'Role' do
-  #   edit do
-  #     field :name
-  #   end
-   
-  # end
+  config.model 'Role' do   
+  end
 
 end
