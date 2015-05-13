@@ -14,11 +14,15 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'haml'
 gem 'ckeditor'
-gem "paperclip"
+gem 'paperclip'
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 gem 'cancancan', '~> 1.10'
 gem 'pg'
 gem 'rails_admin'
+gem 'gritter'
+gem 'friendly_id'
+
+
 
 group :authentication do
 	gem 'devise', '~> 3.4.1'

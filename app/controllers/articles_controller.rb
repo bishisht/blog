@@ -6,7 +6,12 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-		@article = Article.find(params[:id])
+		# @article = Article.find(params[:id])
+		@article = Article.friendly.find(params[:id])
+
+		if request.path != article_path(@article)
+			redirect_to @article, status: :moved_permanently
+		end
 	end
 
 	def new
@@ -56,5 +61,9 @@ class ArticlesController < ApplicationController
 	private
 	def article_params
 		params.require(:article).permit(:title, :text, :bootsy_image_gallery_id)
+	end
+
+	def set_article
+		@article - Article.friendly.find(params[:id])
 	end
 end

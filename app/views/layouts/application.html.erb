@@ -4,12 +4,23 @@
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'rails.validations', 'data-turbolinks-track' => true %>
+  <%= js extend_gritter  %>
+	<% if flash[:notice] %>
+		<%= js add_gritter(flash[:notice], :image => :success, :nodom_wrap  => true) %>
+	<% elsif flash[:error] %>
+		<%= js add_gritter(flash[:error], :image => :error, :title => "Error", :nodom_wrap  => true) %>
+	<% end %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-	
+<div class="container">	
 <%= render "layouts/navbar" %>
+<!-- Gritter -->
+
+
+  
+
 
 <%= yield %>
 </div>
