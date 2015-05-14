@@ -46,5 +46,6 @@
 		</div>
 	</div>
 <% end -%>
-
-<%= will_paginate @articles %>
+<div align="center">
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+</div>

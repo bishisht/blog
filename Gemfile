@@ -22,6 +22,7 @@ gem 'rails_admin'
 gem 'gritter'
 gem 'friendly_id'
 gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 
 
