@@ -21,6 +21,7 @@ gem 'pg'
 gem 'rails_admin'
 gem 'gritter'
 gem 'friendly_id'
+gem 'will_paginate'
 
 
 

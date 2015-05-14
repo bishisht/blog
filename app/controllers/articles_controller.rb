@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	# before_filter :signed_in_user, :only=> [:edit, :update, :new]
 	before_action :authenticate_user!, :except=> [:index, :show] #Prevets the non signed in user from creating a new blog post
 	def index
-		@articles = Article.all
+		@articles = Article.all.paginate(page: params[:page], per_page: 5)
 	end
 
 	def show

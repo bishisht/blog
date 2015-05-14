@@ -3,15 +3,6 @@
 	<%= link_to 'New Article', new_article_path %>
 <% end -%>
 
-			<td></td>
-			<td></td>
-			<td>
-			 </td>
-		</tr>
-
-</table>
-
-
 <!-- Try making listing of article beautiful -->
 <% @articles.each do |article| %>
 	<div class="row clearfix">
@@ -55,3 +46,5 @@
 		</div>
 	</div>
 <% end -%>
+
+<%= will_paginate @articles %>
