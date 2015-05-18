@@ -16,12 +16,13 @@ gem 'pg'
 gem 'rails_admin'
 gem 'gritter'
 gem 'friendly_id'
+gem 'bootstrap-sass'
+
 
 group :assets do 
 	gem 'jquery-rails'
 	gem 'coffee-rails', '~> 4.1.0'
 	gem 'sass-rails', '~> 5.0'
-	gem 'bootstrap-sass'
 	gem 'autoprefixer-rails'
 	gem 'haml'
 	gem 'angularjs-rails'
