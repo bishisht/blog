@@ -2,17 +2,12 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.1'
-gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
 
-gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bootstrap-sass'
-gem 'autoprefixer-rails'
-gem 'haml'
+
 gem 'ckeditor'
 gem 'paperclip'
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
@@ -22,7 +17,15 @@ gem 'rails_admin'
 gem 'gritter'
 gem 'friendly_id'
 
-
+group :assets do 
+	gem 'jquery-rails'
+	gem 'coffee-rails', '~> 4.1.0'
+	gem 'sass-rails', '~> 5.0'
+	gem 'bootstrap-sass'
+	gem 'autoprefixer-rails'
+	gem 'haml'
+	gem 'angularjs-rails'
+end
 
 group :authentication do
 	gem 'devise', '~> 3.4.1'
