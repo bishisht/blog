@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_one :role
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -13,4 +14,14 @@ class User < ActiveRecord::Base
   def is?(requested_role)
   	self.role == requested_role.to_s
   end
+
+
+  # In the following code you can change the way rails admin declares field on the backend.   
+  # rails_admin do
+  #   edit do 
+  #     field :email
+  #     field :role
+
+  #   end
+  # end
 end

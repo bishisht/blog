@@ -16,7 +16,12 @@ gem 'pg'
 gem 'rails_admin'
 gem 'gritter'
 gem 'friendly_id'
+<<<<<<< HEAD
 gem 'bootstrap-sass'
+=======
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+>>>>>>> 920d8fb87b93f91b42bb5cf305ae1692478046de
 
 
 group :assets do 
