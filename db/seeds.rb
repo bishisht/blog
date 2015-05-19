@@ -14,5 +14,12 @@ Article.create(title: 'Article 6', text: 'Text 6')
 Article.create(title: 'Article 7', text: 'Text 7')
 Article.create(title: 'Article 8', text: 'Text 8')
 
+# Create some roles.
+Role.create(name: "Admin")
+Role.create(name: "Default")
+
+# Create some users.
+
+
 
 # u1 = User.create({})

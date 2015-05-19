@@ -15,9 +15,11 @@ test:
   password: bandana
 
 production:
+  host: ec2-184-73-253-4.compute-1.amazonaws.com
   adapter: postgresql
   encoding: unicode
-  database: blog_production
+  database: df5p9fd9iifhmt
   pool: 5
-  username: bishisht
-  password: bandana
+  username: aaqcrhjffdrrdq
+  password: tyGpU2AHgD_-IfytBxMBv9eHIB
+  port: 5432

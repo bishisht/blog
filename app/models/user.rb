@@ -11,10 +11,17 @@ class User < ActiveRecord::Base
   # The available Roles
   Roles = [:admin, :default]
 
-  def is?(requested_role)
-  	self.role == requested_role.to_s
+  # def is?(requested_role)
+  # 	self.role == requested_role.to_s
+  # end
+
+  def admin?
+    self.role.name == "Admin"
   end
 
+  def default?
+    self.role.name == "Default"
+  end
 
   # In the following code you can change the way rails admin declares field on the backend.   
   # rails_admin do
