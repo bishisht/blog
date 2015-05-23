@@ -2,14 +2,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    guest = User.new
-    guest.role = Role.new
-    guest.role.name = "Default"
-    user ||= guest # Guest user
-    if user.admin?
-        can :manage :all
-    elsif user.default?
-        can :read :all            
-    end        
+    user ||= User.new #in case of guest
+    if user.role_id == 1
+      can :manage, :all 
+    else
+      can :read, :all 
+    end 
   end
 end
