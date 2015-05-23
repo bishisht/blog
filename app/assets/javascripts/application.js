@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require gritter
 //= require turbolinks
-//= require ckeditor/init
 //= require bootstrap-sprockets
 //= require_tree .

@@ -7,7 +7,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'ckeditor'
+# gem 'ckeditor'
 gem 'paperclip'
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 gem 'cancancan', '~> 1.10'
