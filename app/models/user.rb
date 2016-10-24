@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  has_and_belongs_to_many :roles, :join_table => :users_roles  
-  
+  has_and_belongs_to_many :roles, :join_table => :users_roles
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -23,19 +24,19 @@ class User < ActiveRecord::Base
   # def default?
   #   self.role.name == "Default"
   # end
+  # 
+  # def has_role?(role_sym)
+  #   roles.any? { |r| r.name.unserscore.to_sym == role_sym }
+  # end
 
-  def has_role?(role_sym)
-    roles.any? { |r| r.name.unserscore.to_sym == role_sym }
-  end 
-
-  # In the following code you can change the way rails admin declares field on the backend.   
+  # In the following code you can change the way rails admin declares field on the backend.
   # rails_admin do
-  #   edit do 
+  #   edit do
   #     field :email
   #     field :role
 
   #   end
   # end
 
-  
+
 end
