@@ -1,18 +1,20 @@
 development:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: blog_development
   pool: 5
-  username: bishisht
-  password: bandana
+  username: postgres 
+  password: kathmandu143.
 
-test:
+test: &test
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: blog_test
   pool: 5
-  username: bishisht
-  password: bandana
+  username: postgres
+  password: kathmandu143.
 
 production:
   host: ec2-184-73-253-4.compute-1.amazonaws.com
@@ -23,3 +25,6 @@ production:
   username: aaqcrhjffdrrdq
   password: tyGpU2AHgD_-IfytBxMBv9eHIB
   port: 5432
+
+cucumber:
+  <<: *test

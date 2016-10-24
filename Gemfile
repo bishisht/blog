@@ -42,6 +42,11 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
+group :test do
+	gem 'cucumber-rails', :require => false
+	gem 'database_cleaner'
+end
+
 group :production do
 	gem 'rails_12factor'
 	# ruby '2.0.0'
